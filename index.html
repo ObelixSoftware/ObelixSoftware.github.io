@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yesterday's Heroes</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="TODO description" />
+    <meta name="keywords" content="History, Speed, Engineering ,features, legends, speciality, occurred first made, flashy, driven by passion, legacy" />
+    <meta name="author" content="Lennie De Villiers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Social Sharing -->
+    <meta property="og:url" content="https://obelixsoftware.github.io/WD_Magazine/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yesterday's Heroes" />
+    <meta property="og:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today" />
+    <meta property="og:site_name" content="https://obelixsoftware.github.io/WD_Magazine/" />
+    <meta property="og:image" content="assets/share/logo.png" />
+    <meta name="twitter:title" content="Yesterday's Heroes">
+    <meta name="twitter:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today">
+    <meta name="twitter:image" content="assets/share/logo-twitter.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/shared.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <!-- Include Libraries -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/handlebars.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="data/editions.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Header Title -->
+    <div id="titleHeader"></div>
+
+    <!-- Main logo -->
+    <img class="main_logo" src="assets/main_logo.png" alt="Main site logo" />
+
+    <!-- Introduction text -->
+    <div class="intro_container">
+        <div class="container">
+            <p>A group of close friends all with the love and passion for fast cars where looking back at the good old days, reflecting back on how we got to the slim, streaky and sexy cars we have today . We hope you will enjoy every week's edition where
+                we look at the best of the best, the most loved as well as the most valuable automobiles.
+            </p>
+        </div>
+    </div>
+
+    <!-- Magazine Editions carousel -->
+    <script id="template" type="template/handlebars">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                {{#each buttons}} {{#if active}}
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="{{pos}}" class="active"></button> {{else}}
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="{{pos}}"></button> {{/if}} {{/each}}
+            </div>
+            <div class="carousel-inner">
+                {{#each covers}} {{#if active}}
+                <div class="carousel-item active">
+                    <a href="{{link}}">
+                        <img class="carousel_img d-block w-100" src="{{image}}" alt="{{alt}}" />
+                    </a>
+                </div>
+                {{else}}
+                <div class="carousel-item">
+                    <a href="{{link}}">
+                        <img class="carousel_img d-block w-100" src="{{image}}" alt="{{alt}}" />
+                    </a>
+                </div>
+                {{/if}} {{/each}}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+        </div>
+    </script>
+    <div id="data"></div>
+
+    <!-- Subscribe To Newsletter -->
+    <div class="subscribe_container">
+        <div class="mb-4">
+            <div class="row">
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="subscribe_thankyou.html" method="GET">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <label class="input">Subscribe to our newsletter:</label>
+                                    <input type="text" id="email" name="email" placeholder="Your email address" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+
+</html>

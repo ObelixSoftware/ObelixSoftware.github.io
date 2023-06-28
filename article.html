@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yesterday's Heroes</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="History, Speed, Engineering ,features, legends, speciality, occurred first made, flashy, driven by passion, legacy" />
+    <meta name="author" content="Lennie De Villiers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Social Sharing -->
+    <!-- i would like to be able to have different share details per article but Handlebars.js can't do it  -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yesterday's Heroes" />
+    <meta property="og:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today" />
+    <meta property="og:image" content="assets/share/logo.png" />
+    <meta name="twitter:title" content="Yesterday's Heroes">
+    <meta name="twitter:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today">
+    <meta name="twitter:image" content="assets/share/logo-twitter.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/shared.css" />
+    <link rel="stylesheet" href="style/article.css" />
+    <!-- Include Libraries -->
+    <script src="data/editions.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/handlebars.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/article.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Header Title -->
+    <div id="titleHeader"></div>
+
+    <script id="template" type="template/handlebars">
+        <div class="content">
+            {{#if audio}}
+            <audio controls preload="auto" style="width:100%;">
+                <source src="{{audio_1}}" type="audio/ogg">
+                <source src='{{audio_2}}' type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+              {{/if}}
+
+            {{#each contents}} {{#if quote}}
+            <p class="quote">{{quote}}</p>
+            {{/if}} {{#if quote_bold}}
+            <p class="quote_bold">{{quote_bold}}</p>
+            {{/if}} {{#if text}}
+            <p class="text">{{text}}</p>
+            {{/if}} {{#if h1}}
+            <h1>{{h1}}</h1>
+            {{/if}} {{#if h2}}
+            <h2>{{h2}}</h2>
+            {{/if}} {{#if image}}
+            <a href="{{image}}"><img class="alt_image" src="{{image}}" alt="{{alt}}" /></a> {{/if}} {{/each}}
+        </div>
+    </script>
+    <div id="data"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+
+</html>

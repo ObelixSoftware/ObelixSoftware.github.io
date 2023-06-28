@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yesterday's Heroes</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="History, Speed, Engineering ,features, legends, speciality, occurred first made, flashy, driven by passion, legacy" />
+    <meta name="author" content="Lennie De Villiers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/shared.css" />
+    <link rel="stylesheet" href="style/events.css" />
+    <!-- Social Sharing -->
+    <meta property="og:url" content="https://obelixsoftware.github.io/WD_Magazine/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yesterday's Heroes" />
+    <meta property="og:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today" />
+    <meta property="og:site_name" content="https://obelixsoftware.github.io/WD_Magazine/" />
+    <meta property="og:image" content="assets/share/logo.png" />
+    <meta name="twitter:title" content="Yesterday's Heroes">
+    <meta name="twitter:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today">
+    <meta name="twitter:image" content="assets/share/logo-twitter.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Include Libraries -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/handlebars.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script src="data/events_data.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/events.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Header Title -->
+    <div id="titleHeader"></div>
+
+    <!-- Main logo -->
+    <img class="main_logo" src="assets/main_logo.png" alt="Main site logo" />
+
+    <!-- Introduction text -->
+    <div class="intro_container">
+        <p>
+            Upcoming fast car events, put them in your calendar!
+        </p>
+    </div>
+
+    <div class="blog-home2 py-5">
+        <div class="container">
+            <script id="template" type="template/handlebars">
+                <div class="row mt-4">
+                    {{#each events}}
+                    <div class="col-md-4 on-hover">
+                        <div class="card border-0 mb-4">
+                            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">{{month}}<span class="d-block">{{day}}</span></div>
+                            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">{{description}}</a></h5>
+                            <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </script>
+            <div id="data"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+
+</html>

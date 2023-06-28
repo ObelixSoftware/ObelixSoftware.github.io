@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yesterday's Heroes</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="History, Speed, Engineering ,features, legends, speciality, occurred first made, flashy, driven by passion, legacy" />
+    <meta name="author" content="Lennie De Villiers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Social Sharing -->
+    <meta property="og:url" content="https://obelixsoftware.github.io/WD_Magazine/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yesterday's Heroes" />
+    <meta property="og:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today" />
+    <meta property="og:site_name" content="https://obelixsoftware.github.io/WD_Magazine/" />
+    <meta property="og:image" content="assets/share/logo.png" />
+    <meta name="twitter:title" content="Yesterday's Heroes">
+    <meta name="twitter:description" content="Passionate for fast cars, looking at the good old days and reflecting back on how we got to the slim, streaky and so sexy cars we have today">
+    <meta name="twitter:image" content="assets/share/logo-twitter.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/shared.css" />
+    <link rel="stylesheet" href="style/editions.css" />
+    <!-- Include Libraries -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/handlebars.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="data/editions.js"></script>
+    <script src="js/editions.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Header Title -->
+    <div id="titleHeader"></div>
+
+    <!-- Main logo -->
+    <img class="main_logo" src="assets/main_logo.png" alt="Main site logo" />
+
+    <!-- Introduction text -->
+    <div class="intro_container">
+        <p>
+            All our Magazine editions.
+        </p>
+    </div>
+
+    <script id="template" type="template/handlebars">
+        <div class="row">
+            {{#each editions}}
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="{{link}}">
+                        <img src="{{image}}" alt="{{alt}}" class="alt_image img-rounded">
+                    </a>
+                </div>
+                <div class="caption">
+                    <p>{{{caption}}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <div id="data"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+
+</html>

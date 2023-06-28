@@ -1,0 +1,74 @@
+body {
+    justify-content: left;
+    align-items: left;
+}
+
+.content {
+    margin-left: 180px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: left;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.quote {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.quote_bold {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Audio player on Mobile */
+
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 33px);
+}  
+
+/* Mobile Styling */
+
+@media only screen and (max-width: 600px) {
+    h1.title {
+        font-size: 16px;
+        margin-top: 70px;
+        font-weight: bold;
+        text-align: center;
+    }
+    h1 {
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+    .content {
+        margin-left: 5px;
+    }
+    .quote {
+        font-size: 14px;
+    }
+    .quote_bold {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,23 @@
+.title-style {
+    background-color: #647c8d;
+    height: 100px;
+}
+
+/* Mobile Styling */
+
+@media only screen and (max-width: 600px) {
+    h1.title {
+        font-size: 20px;
+        margin-top: 70px;
+        text-align: center;
+    }
+    h4.sub_title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .title-style {
+        background-color: #647c8d;
+        height: 100px;
+    }
+}

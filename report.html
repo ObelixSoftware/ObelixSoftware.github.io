@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yesterday's Heroes</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="History, Speed, Engineering ,features, legends, speciality, occurred first made, flashy, driven by passion, legacy" />
+    <meta name="author" content="Lennie De Villiers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/shared.css" />
+    <link rel="stylesheet" href="style/report.css" />
+    <!-- Include Libraries -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/handlebars.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/report.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Header Title -->
+    <div class="text-center title-style">
+        <h1 class="title">Yesterday's Heroes</h1>
+        <h4 class="sub_title">CM1040 - Web Development Final Assignment Report</h4>
+    </div>
+
+    <!-- Collapse elements (https://www.w3schools.com/bootstrap5/bootstrap_collapse.php)
+    that list all the different elements need to report on 
+    -->
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c1">
+                  Introduction
+          </a>
+            </div>
+            <div id="c1" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    I love cars and the history of cars is an interesting subject to write about. Decide to write a story that start with the history of the first car and the revolution.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c2">
+                  State 3 things that have inspired you when creating your website
+        </a>
+            </div>
+            <div id="c2" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Love and passion of the automobile world.</li>
+                        <li>Growing up with my dad restoring old ladies to there peak to see that transformation.</li>
+                        <li>wanting to share that passion with the world.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c3">
+                  State 3 ways in which your site is accessible.      
+                </a>
+            </div>
+            <div id="c3" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Render on desktop web browsers</li>
+                        <li>Render on mobile devices</li>
+                        <li>Each edition have a audio recording so can play and listen to the edition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c4">
+                  State 3 ways in which you have considered usability in your site.     
+              </a>
+            </div>
+            <div id="c4" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Want to keep it simple and easy to use, not over engineered.</li>
+                        <li>Access all editions quickly from the home screen</li>
+                        <li>Accessable on mobile</li>
+                        <li>Content get loaded from JSON structure so even if its 5 pages the actual content get loaded using Handlebars.js and so not seperate pages per edition.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c5">
+                  State 3 things you had to learn/find out by yourself when creating your site, and describe
+                  how you did that    
+                </a>
+            </div>
+            <div id="c5" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Research on the history, finding the different images and writting the content.</li>
+                        <li>Create all the different graphics used by the website like the logo etc.</li>
+                        <li>Use Bootstrap 5 CSS framework to cater for responsive design and the features used by the site like the image gallery on the home page.</li>
+                        <li>Learning how to override some Bootstrap CSS framework elements to customise.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c6">
+                  What aspect(s) of your work do you think worked well and why?          
+                </a>
+            </div>
+            <div id="c6" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Using a CSS framework - Bootstrap 5 in this case</li>
+                        <li>Use client side Handlebars.js to load the per edition content from JSON</li>
+                        <li>Audio that read the edition</li>
+                        <li>Generic meta tags on the website that return the title, description and logo when site is shared to social media.</li>
+                        <li>Responsive design. Wasn't very difficult to implement a desktop and mobile view</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c7">
+                  What aspect(s) of your work could be improved, and how might you do things differently
+                  another time?         
+              </a>
+            </div>
+            <div id="c7" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Read content from a headless CMS system like <a href="https://strapi.io">Strapi.io</a></li>
+                        <li>Use a paid audio service to convert text into audio to read each edition</li>
+                        <li>Use server side pre-compiled components for Handlebars.js</li>
+                        <li>Website use static meta tags for sharing to social media, would like it to be flexiable per edition so that when a page is shared it will have the content for the edition.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c8">
+                  What resources were used when creating your work?        
+            </a>
+            </div>
+            <div id="c8" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Bootstrap 5.0.2</li>
+                        <li>jQuery 3.6.0</li>
+                        <li><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+                        <li><a href="https://www.w3schools.com/bootstrap5/index.php">w3schools Bootstrap Tutorial</a></li>
+                        <li><a href="https://www.w3schools.com/css/index.php">w3schools CSS Tutorial</a></li>
+                        <li><a href="https://www.codegrepper.com/code-examples/html/bootstrap+change+card+header+size">Change Bootstrap card header size</a></li>
+                        <li><a href="https://github.com/jongrover/jquery-handlebars-partial-fetcher">fetch function using jQuery</a></li>
+                        <li><a href="https://www.iconfinder.com/iconsets/black-white-social-media">Black and white social icons</a></li>
+                        <li><a href="https://mdbootstrap.com/docs/b4/jquery/forms/contact/">Bootstrap email contact us form</a></li>
+                        <li>
+                            <a href="https://snippets.wrappixel.com/bootstrap-events-section/">Bootstrap event sample</a>
+                        </li>
+                        <li>
+                            <a href="https://www.canva.com">Canva to prepare all the images etc</a>
+                        </li>
+                        <li>
+                            <a href="https://online-audio-converter.com">Convert audio WAV reporting into MP3 / OGG formats</a>
+                        </li>
+                        <li>The audio reading of the editions was done by a family member - Yvette that have a beautiful voice.</li>
+                        </ul>
+                        <h2>Resources</h2>
+                        <h3>First Edition</h3>
+                        <ul>
+                            <li><a href='https://www.goodwood.com/grr/road/news/2022/1/the-13-best-american-cars-of-all-time/'>first_edition_image_1</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Henry_Ford'>first_edition_image_2</a></li>
+                            <li><a href='https://finance.yahoo.com/news/day-market-history-ford-sets-153006129.html'>first_edition_image_3</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Henry_Ford'>first_edition_image_4</a></li>
+                            <li><a href='https://jerrygarrett.wordpress.com/2012/10/11/did-this-car-save-ford-motor-company/'>first_edition_image_5</a></li>
+                            <li><a href='https://jerrygarrett.wordpress.com/2012/10/11/did-this-car-save-ford-motor-company/'>first_edition_image_6</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Ford_Model_A_(1903%E2%80%9304)'>first_edition_image_7</a></li>
+                            <li><a href='https://www.britannica.com/topic/Ford-Motor-Company'>first_edition_image_8</a></li>
+                            <li><a href=' https://corporate.ford.com/articles/history/henry-ford-biography.html)'>Credit Henry ford Biography</a></li>                            
+                        </ul>
+                        <h3>Illustrations credit to JON BRANCH | DECEMBER 10TH 201</h3>
+                        <ul>
+                            <li><a href='https://www.classic.com/veh/1903-ford-model-a-nw0rkXW/'>Credit for text</a></li>
+                            <li><a href='https://www.topspeed.com/cars/the-gilded-history-of-the-rolls-royce-phantom-ar177115.html'>Credit for text: Johnathan Lopez</a></li>
+                            <li><a href='https://www.topspeed.com/cars/rolls-royce/2013-rolls-royce-phantom-coupe-series-ii-ar124263.html'>Credit for Alina Moore text</a></li>
+                            <li><a href='https://www.topspeed.com/cars/rolls-royce/2018-rolls-royce-phantom-viii-ar163580.html'>Credit for text</a></li>
+                            <li><a href='https://etypeuk.com/discover/history/'>Credit for text</a></li>
+                            <li><a href='https://www.aronline.co.uk/cars/jaguar/e-type/'>Credit for text</a></li>
+                            <li><a href='https://www.mercedes-benz.com/en/classic/history/mercedes-benz-300-sl-gullwing-w-198/'>Credit for text</a></li>
+                        </ul>
+                        <h3>Second Edition</h3>
+                        <ul>
+                            <li><a href='https://www.peakpx.com/en/search?q=rolls+royce+classic+car'>Second edition image1</a></li>
+                            <li><a href='https://www.handh.co.uk/auction/lot/67-1936-rolls-royce-2530-sedanca-de-ville/?lot=9840&sd=1'>Second edition image2</a></li>
+                            <li><a href='https://www.bonhams.com/auctions/19767/lot/225/'>Second edition image 3</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Rolls-Royce_Phantom_IV'>Second edition image 4</a></li>
+                            <li><a href='https://www.gq-magazine.co.uk/article/rolls-royce-price-phantom-coupe-review/amp'>Second edition image 5</a></li>
+                            <li><a href='https://www.topspeed.com/cars/car-news/you-can-now-configure-the-rolls-royce-phantom-of-your-dreams-ar177192.amp.html'>Second edition image 6</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Rolls-Royce_Phantom_(eighth_generation)'>Second edition image 7</a></li>
+                            <li><a href='https://www.britannica.com/topic/Ford-Motor-Company'>Second edition image 8</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Rolls-Royce_Phantom'>Credit for text</a></li>
+                        </ul>
+                        <h3>Third Edition</h3>
+                        <ul>
+                            <li><a href='https://www.qualityautocare.net/car-news-by-quality-auto-care-your-trusted-repair-shop-on-long-island/2017/3/12/a-little-bmw-history'>third_edition_image_1</a></li>
+                            <li><a href='https://www.bonhams.com/auctions/21768/lot/309/'>third_edition_image_2</a></li>
+                            <li><a href='https://www.bonhams.com/auctions/21768/lot/309/'>third_edition_image_3</a></li>
+                            <li><a href='https://www.businessinsider.com/bmw-is-turning-100-heres-its-story-2016-5?amp'>third_edition_image_4</a></li>
+                            <li><a href='https://www.theglobeandmail.com/globe-drive/in-photos-100-years-of-bmw/article29032892/'>third_edition_image_5</a></li>
+                            <li><a href='https://no.m.wikipedia.org/wiki/BMW_E3'>third_edition_image_6</a></li>
+                            <li><a href='https://www.topgear.com/car-news/motorsport/top-gears-coolest-racing-cars-bmw-30-csl'>third_edition_image_7</a></li>
+                            <li><a href='https://www.caranddriver.com/features/g15378940/bavarian-motor-working-a-visual-history-of-bmw/'>third_edition_image_8</a></li>
+                            <li><a href='https://www.theglobeandmail.com/globe-drive/in-photos-100-years-of-bmw/article29032892/'>third_edition_image_9</a></li>
+                            <li><a href='https://www.press.bmwgroup.com/latin-america-caribbean/article/detail/T0257924EN/the-history-of-the-bmw-group:-100-years-of-fascination-for-mobility?language=en'>third_edition_image_10</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/BMW'>Credit for text</a></li>
+                        </ul>
+                        <h3>Fourth Edition</h3>
+                        <ul>
+                            <li><a href='https://www.caranddriver.com/photos/g18039620/1961-jaguar-e-type-road-test-review-gallery/'>fourth_edition_image_1</a></li>
+                            <li><a href='https://www.quadrantkindercentra.nl/locaties/bso-westervriend-dependance/?w=5.60.6074359.4.18.74.jaguar%20e%20type%20price%202020'>fourth_edition_image_2</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/File:Jaguar_E-Type_Series_1_3.8_Litre_1961.jpg'>fourth_edition_image_3</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Jaguar_F-Type'>fourth_edition_image_4</a></li>
+                            <li><a href='https://www.retroroadster.com/en/jaguar-e-type/histoire-de-la-jaguar-type-e/'>fourth_edition_image_5</a></li>
+                            <li><a href=' https://www.iptc.org/'>fourth_edition_image_6</a></li>
+                            <li><a href='https://www.jaguar.com.mt/jaguar-range/f-type/overview'>fourth_edition_image_8</a></li>
+                            <li><a href='https://etypeuk.com/newsroom/history/'>fourth_edition_image_9</a></li>
+                            <li><a href='https://etypeuk.com/newsroom/history/'>fourth_edition_image_10</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Jaguar_Cars'>Credit for text</a></li>
+                            <li><a href='https://www.the-blueprints.com/blueprints/cars/jaguar/92451/view/jaguar_e-type_1961/'>Intro: “V8 Horsepower, in a 50kg frame”</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Jaguar_F-Type'>Credit for text</a></li>                            
+                            <li><a href='https://www.caranddriver.com/photos/g18039620/1961-jaguar-e-type-road-test-review-gallery/?slide=4'>Image</a></li>
+                        </ul>
+                        <h3>Fifth Edition</h3>
+                        <ul>
+                            <li><a href='https://somar78.tumblr.com/post/189695320092/mercedes-benz-sl300/amp'>fifth_edition_image_1</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Mercedes_Simplex'>fifth_edition_image_2</a></li>
+                            <li><a href='https://www.flickr.com/photos/lionking369/9278081384/in/photostream'>fifth_edition_image_3</a></li>
+                            <li><a href='https://www.hobbydb.com/marketplaces/hobbydb/catalog_items/mercedes-benz-300sl-gullwing'>fifth_edition_image_4</a></li>
+                            <li><a href='https://www.brabus.com/en/cars/classics/C4S034C.html'>fifth_edition_image_5</a></li>
+                            <li><a href='https://www.instagram.com/p/Y0W44LS3q3/?crlt.pid=ig.QmFDbv0GGssL&epik=dj0yJnU9NjhSMEtYbjNNU0lMRXpiRWp1ZzVFdklfaVFRelNvRWkmcD0wJm49Wm9sbXAxbmtmY0d1Wld2MHNkaWhQdyZ0PUFBQUFBR01UaEp3'>fifth_edition_image_6</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Mercedes-Benz_300_SL'>fifth_edition_image_7</a></li>
+                            <li><a href='https://group-media.mercedes-benz.com/marsMediaSite/en/instance/ko/Well-weighed-development-the-first-Mercedes-Benz-SL-models-in-the-1950s.xhtml?oid=9916621'>fifth_edition_image_8</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Carl_Benz'>fifth_edition_image_9</a></li>
+                            <li><a href='https://en.m.wikipedia.org/wiki/Gottlieb_Daimler'>fifth_edition_image_10</a></li>
+                            <li><a href='https://group-media.mercedes-benz.com/marsMediaSite/en/instance/picture.xhtml?oid=7447627'>fifth_edition_image_11</a></li>
+                            <li><a href='https://www.hemmings.com/stories/article/1954-57-mercedes-benz-300-sl'>fifth_edition_image_12</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Mercedes-Benz_300_SL'>Credit for text</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Mercedes-Benz'>Credit for text</a></li>
+                            <li><a href='https://en.wikipedia.org/wiki/Mercedes-Benzz'>Credit for text</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#c9">
+                  Appendices
+                </a>
+            </div>
+            <div id="c9" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <h2>Wireframe</h2>
+                    <a href="assets/documentation/wireframe.pdf">
+                        Wireframe PDF Document
+                    </a>
+                    <h2>Design</h2>
+                    <a href="assets/documentation/design.pdf">
+                        Design PDF Document
+                    </a>
+                    <h2>Logo Ideas</h2>
+                    <a href="assets/documentation/logos.pdf">
+                        Logos PDF Document
+                    </a>
+                    <h2>Site Map</h2>
+                    <a href="assets/documentation/sitemap.jpg">
+                        <img class="alt_image" src="assets/documentation/sitemap.jpg" alt="SiteMap" />
+                    </a>
+                    <h2>Mock up - Home</h2>
+                    <a href="assets/mockups/home/desktop.png">
+                        <img class="alt_image" src="assets/mockups/home/desktop.png" alt="Mock up - Home - Desktop" />
+                    </a>
+                    <a href="assets/mockups/home/laptop.png">
+                        <img class="alt_image" src="assets/mockups/home/laptop.png" alt="Mock up - Home - Laptop" />
+                    </a>
+                    <a href="assets/mockups/home/mobile.png">
+                        <img class="alt_image" src="assets/mockups/home/mobile.png" alt="Mock up - Home - Mobile" />
+                    </a>
+                    <a href="assets/mockups/home/tablet.png">
+                        <img class="alt_image" src="assets/mockups/home/tablet.png" alt="Mock up - Home - Tablet" />
+                    </a>
+                    <h2>Mock up - Events</h2>
+                    <a href="assets/mockups/events/desktop.png">
+                        <img class="alt_image" src="assets/mockups/events/desktop.png" alt="Mock up - Events - Desktop" />
+                    </a>
+                    <a href="assets/mockups/events/laptop.png">
+                        <img class="alt_image" src="assets/mockups/events/laptop.png" alt="Mock up - Events - Laptop" />
+                    </a>
+                    <a href="assets/mockups/events/mobile.png">
+                        <img class="alt_image" src="assets/mockups/events/mobile.png" alt="Mock up - Events - Mobile" />
+                    </a>
+                    <a href="assets/mockups/events/tablet.png">
+                        <img class="alt_image" src="assets/mockups/events/tablet.png" alt="Mock up - Events - Tablet" />
+                    </a>
+                    <h2>Mock up - Editions</h2>
+                    <a href="assets/mockups/editions/desktop.png">
+                        <img class="alt_image" src="assets/mockups/editions/desktop.png" alt="Mock up - Editions - Desktop" />
+                    </a>
+                    <a href="assets/mockups/editions/laptop.png">
+                        <img class="alt_image" src="assets/mockups/editions/laptop.png" alt="Mock up - Editions - Laptop" />
+                    </a>
+                    <a href="assets/mockups/editions/mobile.png">
+                        <img class="alt_image" src="assets/mockups/editions/mobile.png" alt="Mock up - Editions - Mobile" />
+                    </a>
+                    <a href="assets/mockups/editions/tablet.png">
+                        <img class="alt_image" src="assets/mockups/editions/tablet.png" alt="Mock up - Editions - Tablet" />
+                    </a>
+                    <h2>Mock up - Contact Us</h2>
+                    <a href="assets/mockups/contact_us/desktop.png">
+                        <img class="alt_image" src="assets/mockups/contact_us/desktop.png" alt="Mock up - Contact Us - Desktop" />
+                    </a>
+                    <a href="assets/mockups/contact_us/laptop.png">
+                        <img class="alt_image" src="assets/mockups/contact_us/laptop.png" alt="Mock up - Contact Us  - Laptop" />
+                    </a>
+                    <a href="assets/mockups/contact_us/mobile.png">
+                        <img class="alt_image" src="assets/mockups/contact_us/mobile.png" alt="Mock up - Contact Us  - Mobile" />
+                    </a>
+                    <a href="assets/mockups/contact_us/tablet.png">
+                        <img class="alt_image" src="assets/mockups/contact_us/tablet.png" alt="Mock up - Contact Us  - Tablet" />
+                    </a>
+                    <h2>Mock up - Article</h2>
+                    <a href="assets/mockups/article/desktop.png">
+                        <img class="alt_image" src="assets/mockups/article/desktop.png" alt="Mock up - Article - Desktop" />
+                    </a>
+                    <a href="assets/mockups/article/laptop.png">
+                        <img class="alt_image" src="assets/mockups/article/laptop.png" alt="Mock up - Article  - Laptop" />
+                    </a>
+                    <a href="assets/mockups/article/mobile.png">
+                        <img class="alt_image" src="assets/mockups/article/mobile.png" alt="Mock up - Article  - Mobile" />
+                    </a>
+                    <a href="assets/mockups/article/tablet.png">
+                        <img class="alt_image" src="assets/mockups/article/tablet.png" alt="Mock up - Article  - Tablet" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+
+</html>

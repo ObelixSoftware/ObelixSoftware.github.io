@@ -1,1 +1,1 @@
-# ObelixSoftware.github.io
+# Yesterday's Heroes Magazine
